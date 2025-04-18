@@ -2,22 +2,13 @@ ServerEvents.recipes(event => {
   const { occultism } = event.recipes;
   const mekanism = MekanismHelper(event);
 
-  for (let [entry, ore] of Object.entries(global.customOres)) {
-    let oreVariants = {
-      stone: `${entry}_ore`,
-      deepslate: `deepslate_${entry}_ore`,
-      nether: `nether_${entry}_ore`,
-      end: `end_${entry}_ore`,
-    };
+  for (let entry in global.customOres) {
+    for (let oreId of Object.values(getCustomOreVariants(entry))) {
+      occultism.crushing(RecipeResult.of(`craftoria:${entry}_dust`, 4), `craftoria:${oreId}`);
 
-    for (let [variant, oreId] of Object.entries(oreVariants)) {
-      if (ore.worldGen[variant] === true) {
-        occultism.crushing(RecipeResult.of(`craftoria:${entry}_dust`, 4), `craftoria:${oreId}`);
+      mekanism.enriching(`2x craftoria:${entry}_dust`, `craftoria:${oreId}`);
 
-        mekanism.enriching(`2x craftoria:${entry}_dust`, `craftoria:${oreId}`);
-
-        event.smelting(`craftoria:${entry}_ingot`, `craftoria:${oreId}`);
-      }
+      event.smelting(`craftoria:${entry}_ingot`, `craftoria:${oreId}`);
     }
     occultism.crushing(RecipeResult.of(`craftoria:${entry}_dust`, 2), `craftoria:raw_${entry}`);
 

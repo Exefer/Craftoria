@@ -56,6 +56,24 @@ const getServerLevel = levelAccessor => {
   return null;
 };
 
+/**@param {string} entry A key inside `global.customOres` */
+const getCustomOreVariants = entry => {
+  const oreVariants = {
+    stone: `${entry}_ore`,
+    deepslate: `deepslate_${entry}_ore`,
+    nether: `nether_${entry}_ore`,
+    end: `end_${entry}_ore`,
+  };
+
+  for (const variant in oreVariants) {
+    if (!global.customOres[entry].worldGen[variant]) {
+      delete oreVariants[variant];
+    }
+  }
+
+  return oreVariants;
+};
+
 /**
  * Used for recipe IDs
  * @param {Special.Mod} mod The mod name

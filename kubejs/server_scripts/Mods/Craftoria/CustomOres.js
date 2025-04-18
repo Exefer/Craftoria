@@ -1,14 +1,6 @@
 LootJS.lootTables(event => {
-  for (const [entry, ore] of Object.entries(global.customOres)) {
-    let oreVariants = {
-      stone: `${entry}_ore`,
-      deepslate: `deepslate_${entry}_ore`,
-      nether: `nether_${entry}_ore`,
-      end: `end_${entry}_ore`,
-    };
-
-    for (const [variant, oreId] of Object.entries(oreVariants)) {
-      if (!ore.worldGen[variant]) continue; // Skip if the variant is not present
+  for (let entry in global.customOres) {
+    for (let oreId of Object.values(getCustomOreVariants(entry))) {
       createLootTable(oreId, `raw_${entry}`);
     }
   }
@@ -16,9 +8,9 @@ LootJS.lootTables(event => {
   /**
    * Creates a loot table for the specified ore type.
    * @param {string} oreId
-   * @param {string} raw
+   * @param {string} rawOre
    */
-  function createLootTable(oreId, raw) {
+  function createLootTable(oreId, rawOre) {
     event
       .getBlockTable(`craftoria:${oreId}`)
       .clear()
@@ -26,7 +18,7 @@ LootJS.lootTables(event => {
         pool.rolls(1);
         pool.addEntry(LootEntry.of(`craftoria:${oreId}`).matchTool(ItemFilter.hasEnchantment('minecraft:silk_touch')));
         pool.addEntry(
-          LootEntry.of(`craftoria:${raw}`)
+          LootEntry.of(`craftoria:${rawOre}`)
             .applyOreBonus('minecraft:fortune')
             .matchTool(ItemFilter.hasEnchantment('minecraft:silk_touch').negate())
             .survivesExplosion()
