@@ -26,3 +26,10 @@ LootJS.lootTables(event => {
       });
   }
 });
+
+BlockEvents.broken(event => {
+  if (!(event.entity instanceof $FakePlayer)) return;
+  if (allRegisteredCustomOres.includes(event.block.id)) {
+    event.cancel();
+  }
+});

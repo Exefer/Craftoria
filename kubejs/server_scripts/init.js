@@ -13,6 +13,7 @@ const $LeverBlock = Java.loadClass('net.minecraft.world.level.block.LeverBlock')
 const $DoorBlock = Java.loadClass('net.minecraft.world.level.block.DoorBlock');
 const $DoubleBlockHalf = Java.loadClass('net.minecraft.world.level.block.state.properties.DoubleBlockHalf');
 const $ServerLevel = Java.loadClass('net.minecraft.server.level.ServerLevel');
+const $FakePlayer = Java.loadClass('net.neoforged.neoforge.common.util.FakePlayer');
 
 const $Integer = Java.loadClass('java.lang.Integer');
 const $Boolean = Java.loadClass('java.lang.Boolean');
@@ -73,6 +74,13 @@ const getCustomOreVariants = entry => {
 
   return oreVariants;
 };
+
+const allRegisteredCustomOres = Object.keys(global.customOres).reduce((acc, entry) => {
+  let variants = getCustomOreVariants(entry);
+  let ores = Object.values(variants).map(oreId => `craftoria:${oreId}`);
+
+  return acc.concat(ores);
+}, []);
 
 /**
  * Used for recipe IDs
