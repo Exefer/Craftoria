@@ -18247,11 +18247,6 @@ hash = "4f6d05057a3aea80320081e40e858e6dc1f7014f994a9d1c19cb9085f3704969"
 metafile = true
 
 [[files]]
-file = "mods/experiencelib.pw.toml"
-hash = "a6691aabc9e02d38e602276557475b3fe52d1ed89408ea74a0c95c97b6d03814"
-metafile = true
-
-[[files]]
 file = "mods/extended-industrialization.pw.toml"
 hash = "62daad8d0cbceba663ac0a6b804de01f5156c23d85386a6fe49146be15526ff1"
 metafile = true
@@ -19118,7 +19113,7 @@ metafile = true
 
 [[files]]
 file = "mods/nirvana-library.pw.toml"
-hash = "e24f7d6b069ff7cc0dfbdee8320c3528159f98b815dbdbd289d5a7462e45aa30"
+hash = "992e1d692c2cc9ad7ce817c53971a9ae7aeae4e8fc516a3163fa0ec56492acbb"
 metafile = true
 
 [[files]]
@@ -19444,11 +19439,6 @@ metafile = true
 [[files]]
 file = "mods/serene-seasons.pw.toml"
 hash = "eb438b9d4a49c0cc65560cdc295bf927cabc6f34319375a0cfbf3aece662add8"
-metafile = true
-
-[[files]]
-file = "mods/server-started.pw.toml"
-hash = "953d09d685ccde15fd4e1d1dbb756bb267cf7913adc03b9b2896222003e35801"
 metafile = true
 
 [[files]]
