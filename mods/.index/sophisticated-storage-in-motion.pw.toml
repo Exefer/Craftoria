@@ -1,16 +1,13 @@
-filename = 'sophisticatedstorageinmotion-1.21.1-0.10.16.99.jar'
-name = 'Sophisticated Storage in Motion'
-side = 'both'
-x-prismlauncher-loaders = [ 'neoforge' ]
-x-prismlauncher-mc-versions = [ '1.21.1' ]
-x-prismlauncher-release-type = 'release'
+name = "Sophisticated Storage in Motion"
+filename = "sophisticatedstorageinmotion-1.21.1-0.10.18.105.jar"
+side = "both"
 
 [download]
-hash = '8852e94054939ea9fe34b5977d274326b31cd6dc'
-hash-format = 'sha1'
-mode = 'metadata:curseforge'
-url = ''
+hash-format = "sha1"
+hash = "f68b2966c3ad92b01e5432d07fe81cd80171ac6b"
+mode = "metadata:curseforge"
 
+[update]
 [update.curseforge]
-file-id = 6538432
+file-id = 6569666
 project-id = 1166930

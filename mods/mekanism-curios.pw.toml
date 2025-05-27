@@ -1,13 +1,13 @@
 name = "Mekanism Curios"
-filename = "mekanismcurios-1.21.1-1.1.0.jar"
+filename = "mekanismcurios-1.21.1-1.2.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "be7d6d1c8099b72e96c7b94ced8ab9131fe2277a"
+hash = "96f017444a6cf8e806cb2e319ff17182bd88c69e"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6556291
+file-id = 6581903
 project-id = 1251061

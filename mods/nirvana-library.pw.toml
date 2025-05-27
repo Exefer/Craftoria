@@ -1,13 +1,13 @@
 name = "Nirvana Library"
-filename = "Nirvana Lib-neoforge-1.21.1-2.0.1.jar"
+filename = "Nirvana Lib-neoforge-1.21.1-2.0.3.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "366be65ea99f49ee0b681856413d9786b7db9fe8"
+hash = "e949d4e4e9e46fe7932823b9df8d7a1d22fe733c"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6558278
+file-id = 6566480
 project-id = 1164411

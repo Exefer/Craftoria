@@ -1,16 +1,13 @@
-filename = 'Loot Beams Refork-neoforge-1.21.1-2.6.2.jar'
-name = 'Loot Beams: Refork'
-side = 'both'
-x-prismlauncher-loaders = [ 'neoforge' ]
-x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
-x-prismlauncher-release-type = 'release'
+name = "Loot Beams: Refork"
+filename = "Loot Beams Refork-neoforge-1.21.1-2.7.0.jar"
+side = "both"
 
 [download]
-hash = 'f41d0ccdff75e14d93b4dcbc67abdc48c158a107'
-hash-format = 'sha1'
-mode = 'metadata:curseforge'
-url = ''
+hash-format = "sha1"
+hash = "58e2f1b7e60995b05f5ed5bc117612d8a9c29485"
+mode = "metadata:curseforge"
 
+[update]
 [update.curseforge]
-file-id = 6518273
+file-id = 6582381
 project-id = 1150640
