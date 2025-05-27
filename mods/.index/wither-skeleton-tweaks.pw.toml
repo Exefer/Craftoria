@@ -1,0 +1,16 @@
+filename = 'WitherSkeletonTweaks-1.21.1-10.1.0.jar'
+name = 'Wither Skeleton Tweaks'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '4b83e3a10fd21e13e413982992f7b9b14dbbfdee'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6428057
+project-id = 255902

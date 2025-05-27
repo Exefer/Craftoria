@@ -1,0 +1,16 @@
+filename = 'PingHUD-4.0.jar'
+name = 'PingHUD'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '6f1b2a4a11440d07529957df80a525606cc8f2f5'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5550167
+project-id = 664124

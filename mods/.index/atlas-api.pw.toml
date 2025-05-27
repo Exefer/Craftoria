@@ -1,0 +1,16 @@
+filename = 'atlas_api-1.21.1-1.1.0.jar'
+name = 'Atlas API'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'dedd632abfd40f23527cb396824d7bbca188e909'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6462042
+project-id = 1145462

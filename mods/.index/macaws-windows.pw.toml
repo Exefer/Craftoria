@@ -1,0 +1,16 @@
+filename = 'mcw-windows-2.3.0-mc1.21.1neoforge.jar'
+name = "Macaw's Windows"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '94ce370ae6cdb5a3f2026507c3db9b1967174ac2'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5635576
+project-id = 363569

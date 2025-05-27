@@ -1,0 +1,16 @@
+filename = 'animal_feeding_trough-1.1.2+1.21-neoforge.jar'
+name = 'Animal Feeding Trough [Fabric | Forge | Quilt | NeoForge]'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '6c29bbeab4b2c174d9f66d6a3e9ef4e136705c5b'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5617654
+project-id = 445838

@@ -1,0 +1,16 @@
+filename = 'oceansdelight-neoforge-1.0.3-1.21.jar'
+name = "Ocean's Delight"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'f74863b60417876c67f9cb438bc5a059e8e805c2'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5618115
+project-id = 841262

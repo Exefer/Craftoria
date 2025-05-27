@@ -1,0 +1,16 @@
+filename = 'eternalstarlight-0.4.3+1.21.1+neoforge.jar'
+name = 'Eternal Starlight'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '617cda5d0e27cccd17cec45bfed957eabbcf4e9a'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6498203
+project-id = 1080592

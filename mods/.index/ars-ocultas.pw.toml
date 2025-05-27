@@ -1,0 +1,16 @@
+filename = 'ars_ocultas-1.21.1-2.1.0.jar'
+name = 'Ars Ocultas'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '3bb925b51d01b4c87eb128536730a9faa34165cc'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6015723
+project-id = 907843

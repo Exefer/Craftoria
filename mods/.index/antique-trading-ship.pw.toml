@@ -1,0 +1,16 @@
+filename = 'antiquetradingship-1.4.0-neoforge-1.21.1.jar'
+name = 'Antique Trading Ship'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '7eb7f2255a37d43788103a00f5076d7bc20423c9'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6445160
+project-id = 1034045

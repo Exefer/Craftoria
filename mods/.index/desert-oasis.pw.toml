@@ -1,0 +1,16 @@
+filename = 'desert_oasis-1.0.2-neoforge-1.21.1.jar'
+name = 'Desert Oasis'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'de68b3dcfd5b1a3acdb03cb610f2e83debb7ee3e'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6490273
+project-id = 1172516

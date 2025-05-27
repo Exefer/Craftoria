@@ -1,0 +1,16 @@
+filename = 'unofficial_ironspells_v2_1.19.2_1.20.1_1.21.1.jar'
+name = "Unofficial Iron's Spells 'n Spellbooks Skill Tree"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.19.2', '1.20.1', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'c542f5fa56b49658b0f0b4595757a8b7ca6acda7'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6460126
+project-id = 1170722

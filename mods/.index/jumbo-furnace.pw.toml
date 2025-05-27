@@ -1,0 +1,16 @@
+filename = 'jumbofurnace-1.21.1-5.0.0.7.jar'
+name = 'Jumbo Furnace'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '1b60f37f3c57224877d571dc0a900681c54aac26'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5824690
+project-id = 390880

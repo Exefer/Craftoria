@@ -1,0 +1,16 @@
+filename = 'youre-in-grave-danger-neoforge-2.0.11.jar'
+name = "You're in Grave Danger"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'f251e85114fde50c6c360509734207e18537fb04'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6371028
+project-id = 544912

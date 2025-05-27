@@ -1,0 +1,16 @@
+filename = 'mcw-holidays-1.1.0-mc1.21.1neoforge.jar'
+name = "Macaw's Holidays"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '3f04e27df578f845c5d9f5b6e9e52bbabec990b9'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5635643
+project-id = 930232

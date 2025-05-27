@@ -1,0 +1,16 @@
+filename = 'chat_heads-0.13.18-neoforge-1.21.jar'
+name = 'Chat Heads'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'e2db950d028ebf0e9fc7c8b275bb6bfa6f39dbac'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6483040
+project-id = 407206

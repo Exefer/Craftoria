@@ -1,0 +1,16 @@
+filename = 'tfthreadsafetyaddon-0.1.2.jar'
+name = 'TwilightForest Thread Safety Addon'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'cb1d962b419f67acf5f55bb34b50cc48f579b44f'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6366986
+project-id = 1184779

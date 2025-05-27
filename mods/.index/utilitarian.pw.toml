@@ -1,0 +1,16 @@
+filename = 'utilitarian-1.21.1-0.13.15.jar'
+name = 'Utilitarian'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'c64bf9b32edd80af141cccbe346988801897a8c1'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6513086
+project-id = 929559

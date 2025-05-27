@@ -1,0 +1,16 @@
+filename = 'Apotheosis-1.21.1-8.3.6.jar'
+name = 'Apotheosis'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'ef1ab222dec53d215a5b6ec83204d9ee6c334c73'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6545942
+project-id = 313970

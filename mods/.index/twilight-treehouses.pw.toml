@@ -1,0 +1,16 @@
+filename = 'TwilightTreehouses-1.0.2-1.21.1-neoforge.jar'
+name = 'Twilight Treehouses'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1', '1.21.2', '1.21.3', '1.21.4' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '723a03a67f81dd42aa2e9a07b1ff665d18d80421'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6341110
+project-id = 1227052

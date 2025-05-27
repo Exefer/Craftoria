@@ -1,0 +1,16 @@
+filename = 'bigger_ae2-1.21.1-1.4.7.jar'
+name = 'Bigger AE2'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'b318a85eb0cd1ec045478970b919901daa1534aa'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6238835
+project-id = 1013772

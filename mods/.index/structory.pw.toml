@@ -1,0 +1,16 @@
+filename = 'Structory_1.21.x_v1.3.10.jar'
+name = 'Structory'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1', '1.21.2', '1.21.3', '1.21.4', '1.21.5' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'fa3afdcb1c830536049d4a9282d9101d350eb1ad'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6402782
+project-id = 636540

@@ -1,0 +1,16 @@
+filename = 'FastEvent-1.21.1-neoforge-1.1.2.jar'
+name = 'FastEvent'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'alpha'
+
+[download]
+hash = '88e896581c2284a5d804359deebee98534ab1fd3'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6531468
+project-id = 1249053

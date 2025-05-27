@@ -1,0 +1,16 @@
+filename = 'mcw-paths-1.1.0neoforge-mc1.21.1.jar'
+name = "Macaw's Paths and Pavings"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '1c4918468974f99b989928c2c58cc7d0f7599105'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6244049
+project-id = 629153

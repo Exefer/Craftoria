@@ -1,0 +1,16 @@
+filename = 'create-dragons-plus-1.5.2.jar'
+name = 'Create: Dragons Plus'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = 'dc6828e1a9ef3597cb3d7f919a15d73156f7b417'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6552025
+project-id = 1216624

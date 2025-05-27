@@ -1,0 +1,16 @@
+filename = 'toomanyrecipeviewers-0.4.2+mc.21.1.jar'
+name = 'TooManyRecipeViewers (TMRV)'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '36d377e04ff752861a26331d1f90cf6ae9d1fd42'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6556004
+project-id = 1194921

@@ -1,0 +1,16 @@
+filename = 'craftingstation-neoforge-1.21-2.jar'
+name = 'Crafting Station'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '45ed133e3e101c1853fb6bb7056d6c4e4899da08'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5569165
+project-id = 318551

@@ -1,0 +1,16 @@
+filename = 'DungeonsAriseSevenSeas-1.21.x-1.0.3.2-neoforge.jar'
+name = 'When Dungeons Arise - Seven Seas'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '9c837da6d9ff5e299ebb18c02c40b9d5c25be318'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5661269
+project-id = 953637

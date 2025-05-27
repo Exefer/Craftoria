@@ -1,0 +1,16 @@
+filename = 'arts_and_crafts-neoforge-1.21.1-1.4.3.jar'
+name = 'Arts & Crafts'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'd8e14b8678a801851639648648ef2a87d3a8a92c'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6423045
+project-id = 1034791

@@ -1,0 +1,16 @@
+filename = 'luminax-1.3.0_neoforge_1.21.1.jar'
+name = 'Luminax'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '5b81554446731f7af197b5328d49acb9a25864eb'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6466960
+project-id = 1165932

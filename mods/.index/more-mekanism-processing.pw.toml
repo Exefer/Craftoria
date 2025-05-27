@@ -1,0 +1,16 @@
+filename = 'MoreMekanismProcessing-1.21.1-6.5.jar'
+name = 'More Mekanism Processing'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '63c0f53a39fed0b251df1efe2070717bb65c868c'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6413523
+project-id = 511965

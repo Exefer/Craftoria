@@ -1,0 +1,16 @@
+filename = 'commoncapabilities-1.21.1-neoforge-2.9.10.jar'
+name = 'Common Capabilities'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '506aced25938aef081913e79f8e6490da7a5052d'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6514971
+project-id = 247007

@@ -1,0 +1,16 @@
+filename = 'bankstorage-1.5.1+1.21.jar'
+name = 'Bank Storage'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '193d6b6db01c177dff70b3efb9497ae27d1aa901'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6253249
+project-id = 916710

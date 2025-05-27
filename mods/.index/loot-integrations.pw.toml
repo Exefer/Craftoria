@@ -1,0 +1,16 @@
+filename = 'lootintegrations-1.21-4.4.jar'
+name = 'Loot Integrations'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'aa69d1da7b7bed71e35e15ee616c50b86a0f4554'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6499144
+project-id = 580689

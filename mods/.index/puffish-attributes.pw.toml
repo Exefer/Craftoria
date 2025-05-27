@@ -1,0 +1,16 @@
+filename = 'puffish_attributes-0.7.3-1.21-neoforge.jar'
+name = "Pufferfish's Attributes [Fabric & Forge & NeoForge]"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'f7a7f774ece073f56730f0b4c9b6555f1d7f27f2'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6319591
+project-id = 991341

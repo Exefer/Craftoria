@@ -1,0 +1,16 @@
+filename = 'darkglint-neoforge-1.21-1.1.6.jar'
+name = 'DarkGlint - RPG Enchantment Glint'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '395acc60ddc0ffe047bc2566c1ee1639f1ee5e8d'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5498268
+project-id = 897544

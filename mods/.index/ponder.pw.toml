@@ -1,0 +1,16 @@
+filename = 'ponderjs-neoforge-1.21.1-2.1.1.jar'
+name = 'Ponder for KubeJS'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'alpha'
+
+[download]
+hash = '5ab8e275687d7b9993427137ac50d35dd0333140'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6556047
+project-id = 622888

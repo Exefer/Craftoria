@@ -1,0 +1,16 @@
+filename = 'keybindjs-2101-1.0.1.jar'
+name = 'KeyBindJS'
+side = 'client'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = '95218c0181dea86747943ec60b10a57bce1bfd29'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6462609
+project-id = 1212200
