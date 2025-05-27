@@ -1,0 +1,13 @@
+name = "Modern Dynamics"
+filename = "Modern-Dynamics-0.9.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "8f7ad788d234205237f8aa4270af1fb10dd01f70"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6063462
+project-id = 552758

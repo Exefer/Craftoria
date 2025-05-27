@@ -1,0 +1,13 @@
+name = "Relics of Rain"
+filename = "relicsofrain-0.3.0+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c8ba403f0244c724d22c589838ec97e5155aaa14"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6282209
+project-id = 1186656

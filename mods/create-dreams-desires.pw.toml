@@ -1,0 +1,13 @@
+name = "Create: Dreams n' Desires"
+filename = "Create_Desires-2-Dreams-1.21.1-2.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1e44ead3684041838e14608894ff8b1fb391f53e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6282649
+project-id = 864781

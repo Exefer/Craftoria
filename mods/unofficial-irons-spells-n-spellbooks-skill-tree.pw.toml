@@ -1,0 +1,13 @@
+name = "Unofficial Iron's Spells 'n Spellbooks Skill Tree"
+filename = "unofficial_ironspells_v2_1.19.2_1.20.1_1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c542f5fa56b49658b0f0b4595757a8b7ca6acda7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6460126
+project-id = 1170722

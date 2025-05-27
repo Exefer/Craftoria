@@ -21,6 +21,11 @@
 !minecraftinstance.json
 !user-prefs.json
 !version-info.json
+!/mods/
+!/index.toml
+!/pack.toml
+
+/mods/.index
 
 Server Test/
 knownkeys.txt
