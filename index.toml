@@ -17858,7 +17858,7 @@ metafile = true
 
 [[files]]
 file = "mods/cable-facades.pw.toml"
-hash = "debc76a386e1486c139c7cc56a22f3054acfc25aa24f61322bb00e62e2ea01b9"
+hash = "a8e4b617a19c1372a11192cd1baff6f69169f6bcbb048971de8a0d9e2c951988"
 metafile = true
 
 [[files]]
@@ -19618,7 +19618,7 @@ metafile = true
 
 [[files]]
 file = "mods/tectonic.pw.toml"
-hash = "e3584bc2eb821acd12e1729d3944e57d7264c4ce8aad38555ceb5597009fa8ca"
+hash = "f2de9a1da527d6b856787cc232d518dbc5c942034197711ac2a9932ba80a198a"
 metafile = true
 
 [[files]]
