@@ -3070,7 +3070,7 @@ hash = "6961a4c6d58d35ce953955710e8e5111d14b09fbf5d713b0435fd5da335e5251"
 
 [[files]]
 file = "config/ftbquests/quests/lang/ru_ru.snbt"
-hash = "1a86a5e50762d30c785c78193064feb964eeacdaa1af68b063cee0feb64358cf"
+hash = "47446cc0f8878b1016033968be06c653653b0fce8b73584f41a59fd6bcc26f1a"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/0414572B7C36F04F.snbt"
@@ -3510,7 +3510,7 @@ hash = "53adbce3b07d37d9d333b2f58593c16bb3546f253a282d090f9409e1aea8311b"
 
 [[files]]
 file = "config/justdirethings-common.toml"
-hash = "24019c99f2393c69d42ec26ac96ab4ffaef635f58cb0cb391c6cefe990d64270"
+hash = "553891e5cb251457d4961225c066c7634f4049ecdfab4c49e5fd973dbcf043be"
 
 [[files]]
 file = "config/justhammers.json"
