@@ -137,10 +137,6 @@ file = "config/advancementplaques.toml"
 hash = "4869026440203da2c8e2e94012236793ce8fce76574177e8c8ca30a45ae8cbb6"
 
 [[files]]
-file = "config/ae2-client.toml"
-hash = "9c9fa0dd4dbbf2180719d536a6fd3f3a491ceeb57895d8b222f4f366c22afc8b"
-
-[[files]]
 file = "config/ae2-common.toml"
 hash = "05ba833dac653d08543ffaf55514f34941a7219cb5be2f022ed9b7e154074aaa"
 
@@ -3377,10 +3373,6 @@ file = "config/invtweaks-client.toml"
 hash = "09494f92882c18a373d4f0c209d3822d1280d1c235ee318cc4342842c6731323"
 
 [[files]]
-file = "config/iris.properties"
-hash = "b431fda1cf89b16b1029b66795cb30e1ecaa78a7634fde1bc0a5cbfb5dc4a37f"
-
-[[files]]
 file = "config/irons_jewelry-common.toml"
 hash = "d640c77b9cbb56c6ca4bd3bf4194ad5fa6dd3572cd22934e29c547d9d8942632"
 
@@ -3799,10 +3791,6 @@ hash = "cc73592e208680c42f5c4e761e55cf394f241ae9e2f1b5e05049805493bf5d0c"
 [[files]]
 file = "config/nerb/general.yaml"
 hash = "ec614cafa950e8fb5c77d497a8bb0b0fa44b8f88c0a0b7767515fdb94f116340"
-
-[[files]]
-file = "config/nolijium.json5"
-hash = "835b5b27307830e2166517f505fd005f49967507fe03c5089f0a8384bead3a93"
 
 [[files]]
 file = "config/not_enough_glyphs/glyph_filter_dark.toml"
@@ -4513,18 +4501,6 @@ file = "config/sounds/world.json"
 hash = "5b0e3ab1c7c2f34917b11731aa4c1e59fc551f072db2e30a35777db59f88906c"
 
 [[files]]
-file = "config/spark/config.json"
-hash = "230ef74f58b4ebfb809cc474e881be3462ede61d56a86437e935b4a3a1ac99f3"
-
-[[files]]
-file = "config/spark/tmp-client/about.txt"
-hash = "8057ccf4540ea269b0fc332225859f44d8f3a55d891fa2e7a3447b6202658d2a"
-
-[[files]]
-file = "config/spark/tmp/about.txt"
-hash = "8057ccf4540ea269b0fc332225859f44d8f3a55d891fa2e7a3447b6202658d2a"
-
-[[files]]
 file = "config/stickit-server.toml"
 hash = "93dd22b7912e3bb798d495e24528ba69a3fc625b6b5e7bfe9b948eeda40372f7"
 
@@ -4797,26 +4773,6 @@ file = "config/visualworkbench-common.toml"
 hash = "db3a2a559ddbdb5a40c2e7e1b3afd88dd5def2fd35c0af17a1ba4bb967d9be88"
 
 [[files]]
-file = "config/voicechat/translations.properties"
-hash = "b258a94a5ed60fbf93b66c452c3d6e36b044f630741f90e5b13852a4805b235e"
-
-[[files]]
-file = "config/voicechat/username-cache.json"
-hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-
-[[files]]
-file = "config/voicechat/voicechat-client.properties"
-hash = "ae5ce9f675c4e16d4162d9fccce099af8f3d9fdd1a7e675731f152e73b9dac78"
-
-[[files]]
-file = "config/voicechat/voicechat-server.properties"
-hash = "5145c460c1a32442588f61b6d1fc4f9b1f9b03a73883bbfbf588c276859705b4"
-
-[[files]]
-file = "config/voicechat/voicechat-volumes.properties"
-hash = "33afebdb8ef07a3d774086931dec8d899f4da7aeba5b448fd4eee540ba5e02a2"
-
-[[files]]
 file = "config/watut-client.toml"
 hash = "6a90211c746db774220fb086c0fa0c7dafa721d092c89ee6bd5537f11e71a352"
 
@@ -4903,6 +4859,38 @@ hash = "7e835d42b9afe2238d99ded9060e8bbe38fb4314d02b7303a10b2f987ab6ed78"
 [[files]]
 file = "defaultconfigs/usefulhats-server.toml"
 hash = "31abf2ca0e114e5080cedb03aed079ee43fce91857fb2e7b7843c3b59716e088"
+
+[[files]]
+file = "emotes/Blow Kiss.emotecraft"
+hash = "9edd811a26112327b7d4bef979abe4a11852dd812730c55d6c4eccb7754d5e7c"
+
+[[files]]
+file = "emotes/Cool Sit.emotecraft"
+hash = "b7fc49d00052854631db398dd8a80e7d8669eded5394906cf264f1b7a407005d"
+
+[[files]]
+file = "emotes/Dance (Ralsei).emotecraft"
+hash = "e7eac43d03fb92a561b1921dc3804128948d9e2281f5762bd9c60f1f9f330192"
+
+[[files]]
+file = "emotes/Family Guy Death.emotecraft"
+hash = "b36d60ceea4397a4fe14c311eece5d489b8c1b8ef12d14e436a942a03a0fcc70"
+
+[[files]]
+file = "emotes/Front flip.emotecraft"
+hash = "28e9f5654d305b4d5c5f350f7c57c4f487f6e7a56ce8b38b420e88ee65886f59"
+
+[[files]]
+file = "emotes/Kneeling.emotecraft"
+hash = "d3b20bb17489e4e8a192ee0993e2173660bd523eccfdfe20c1a79901d692b3bb"
+
+[[files]]
+file = "emotes/Lay on back.emotecraft"
+hash = "0889868b236fe194f933fae72c3534fc3937ddcc508570b02a48ab954b32f262"
+
+[[files]]
+file = "emotes/Sit.emotecraft"
+hash = "264ac557957621b78835714574762648c5f5e553011b8181cad382f9afc66505"
 
 [[files]]
 file = "kubejs/README.txt"
@@ -19890,3 +19878,7 @@ metafile = true
 file = "mods/zume.pw.toml"
 hash = "b242b6de5a59d1f480d2af1cdee0c91cdce35f3d364496896de71445d0907dcc"
 metafile = true
+
+[[files]]
+file = "version_info.json"
+hash = "1997187463354705e59145cf0fc05ebefe1ae4481673338a121d2755f3166010"

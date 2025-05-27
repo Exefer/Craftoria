@@ -24,6 +24,7 @@
 !/mods/
 !/index.toml
 !/pack.toml
+!/.packwizignore
 
 Server Test/
 knownkeys.txt
