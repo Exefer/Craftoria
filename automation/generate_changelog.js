@@ -2,11 +2,12 @@ import path from "node:path";
 import fs from "node:fs/promises";
 import { capitalize, isFile, readJsonFile, writeTextToFile } from "./utils";
 import { $ } from "bun";
+import packToml from "../pack.toml";
 
 // Configuration
 const CONFIG = {
   gitRepoPath: path.resolve(import.meta.dir, ".."),
-  packVersion: "1.20.4",
+  packVersion: packToml.version,
   oldPackVersion: "1.20.3",
   fileId: "/123456",
   branchName: "main",
