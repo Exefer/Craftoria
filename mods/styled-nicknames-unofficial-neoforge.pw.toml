@@ -1,0 +1,13 @@
+name = "Styled Nicknames [Unofficial NeoForge]"
+filename = "styled-nicknames-1.6.0-1.21-neo.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e195f9c10647bb34bc490886a9a453f8d3ddbce1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5795541
+project-id = 1118017

@@ -1,0 +1,13 @@
+name = "JEI Crafting"
+filename = "JEI Crafting-1.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "39b9f4128ddbddfc8457222614c308c9b5ab26bc"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6213170
+project-id = 1202262

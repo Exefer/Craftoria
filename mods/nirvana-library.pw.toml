@@ -1,0 +1,14 @@
+name = "Nirvana Library"
+filename = "Nirvana Lib-neoforge-1.21.1-2.0.2.jar"
+side = "both"
+pin = true
+
+[download]
+hash-format = "sha1"
+hash = "5219a329de8496a6fdc8379a5e048effefe09dd1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6563282
+project-id = 1164411
