@@ -10,7 +10,7 @@ const CONFIG = {
   packVersion: packToml.version,
   oldPackVersion: "1.20.3",
   fileId: "/123456",
-  branchName: "main",
+  branchName: "HEAD",
   cutoffCommitHash: null,
   saveToFile: true,
   useGithubInstance: true,
@@ -57,7 +57,7 @@ $.cwd(CONFIG.gitRepoPath);
 if (!CONFIG.cutoffCommitHash) {
   const versionBumpRegex = /version bump \d+\.\d+(?:\.\d+)?$/;
 
-  for await (const line of $`git log --oneline --pretty=format:"%h|%s"`.lines()) {
+  for await (const line of $`git log ${CONFIG.branchName} --oneline --pretty=format:"%h|%s"`.lines()) {
     const [commitHash, message] = line.split("|");
 
     if (versionBumpRegex.test(message)) {
@@ -236,7 +236,7 @@ async function generateChangelog() {
     throw new Error(`Repo path doesn't exist: ${CONFIG.gitRepoPath}`);
 
   const commits = (
-    await $`git log ${CONFIG.cutoffCommitHash}..HEAD --pretty=format:"%s \`%an\`" ${CONFIG.branchName}`.text()
+    await $`git log ${CONFIG.cutoffCommitHash}..${CONFIG.branchName} --pretty=format:"%s \`%an\`"`.text()
   )
     .split("\n")
     .filter(Boolean);
