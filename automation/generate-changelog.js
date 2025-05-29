@@ -19,7 +19,7 @@ const CONFIG = {
     WhitePhant0m: "Phantom",
     "Kazuhiko-Gushiken": "Inno",
     ImAK: "AK",
-    "Dietrich Friday": "Blue",
+    "Dietrich Friday": "SubordinalBlue",
   },
   keywords: {
     features: ["add", "implement", "feature", "feat", "chapter"],
