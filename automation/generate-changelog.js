@@ -1,6 +1,12 @@
 import path from "node:path";
 import fs from "node:fs/promises";
-import { capitalize, isFile, readJsonFile, writeTextToFile } from "./utils";
+import {
+  capitalize,
+  getLatestBumpCommitHash,
+  isFile,
+  readJsonFile,
+  writeTextToFile,
+} from "./utils";
 import { $ } from "bun";
 import packMetadata from "../pack.toml";
 
@@ -55,16 +61,7 @@ $.cwd(CONFIG.gitRepoPath);
 
 // If no cutoff commit hash is provided, find the latest version bump commit
 if (!CONFIG.cutoffCommitHash) {
-  const versionBumpRegex = /version bump \d+\.\d+(?:\.\d+)?$/;
-
-  for await (const line of $`git log ${CONFIG.branchName} --oneline --pretty=format:"%h|%s"`.lines()) {
-    const [commitHash, message] = line.split("|");
-
-    if (versionBumpRegex.test(message)) {
-      CONFIG.cutoffCommitHash = commitHash;
-      break;
-    }
-  }
+  CONFIG.cutoffCommitHash = await getLatestBumpCommitHash(CONFIG.branchName);
 }
 
 // Mod processing functions

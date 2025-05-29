@@ -1,3 +1,4 @@
+import { $ } from "bun";
 import fs from "node:fs/promises";
 
 /**
@@ -42,4 +43,20 @@ export async function writeTextToFile(filePath, content) {
 /**@param {string} str */
 export function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/**
+ * Gets the commit hash of the latest version bump.
+ * @param {string} [branchName="HEAD"] - Branch to search.
+ * @returns {Promise<string>} The commit hash.
+ */
+export async function getLatestBumpCommitHash(branchName = "HEAD") {
+  const versionBumpRegex = /version bump \d+\.\d+(?:\.\d+)?$/;
+
+  for await (const line of $`git log ${branchName} --oneline --pretty=format:"%h|%s"`.lines()) {
+    const [commitHash, message] = line.split("|");
+    if (versionBumpRegex.test(message)) {
+      return commitHash;
+    }
+  }
 }
