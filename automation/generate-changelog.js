@@ -20,10 +20,9 @@ const CONFIG = {
     ImAK: "AK",
     "Dietrich Friday": "SubordinalBlue",
   },
-  keywords: {
-    features: ["add", "implement", "feature", "feat", "chapter"],
-    fixes: ["fix", "bug", "resolve", "patch"],
-    filter: ["vscode", "config", "sure", "revert", "lab", "dev", "nope", "nuh", "ugh"],
+  conventionalCommitRegexes: {
+    feat: /^feat(?:\((?!.*(?:dev|debug))[^)]*\))?:/,
+    fix: /^fix(?:\((?!.*(?:dev|debug))[^)]*\))?:/,
   },
 };
 
@@ -110,40 +109,27 @@ function formatUpdateLink(id, oldMods, currentMods) {
   return `* [${oldMod.filename}](https://curseforge.com/projects/${oldUpdate["project-id"]}/files/${oldUpdate["file-id"]}) -> [${newMod.filename}](https://curseforge.com/projects/${newUpdate["project-id"]}/files/${newUpdate["file-id"]})`;
 }
 
-function processCommits(rawCommits) {
-  const features = [];
-  const fixes = [];
-
-  for (const message of rawCommits) {
-    const lowerMessage = message.toLowerCase();
-    if (CONFIG.keywords.filter.some(word => lowerMessage.includes(word))) continue;
-
-    if (CONFIG.keywords.features.some(word => lowerMessage.includes(word))) {
-      let cleanedMessage = message
-        .replace(new RegExp(`^(${CONFIG.keywords.features.join("|")}):?`, "i"), "")
-        .trim();
-
-      Object.entries(CONFIG.namesLookup).forEach(([gitName, displayName]) => {
-        cleanedMessage = cleanedMessage.replace(new RegExp(gitName, "g"), displayName);
-      });
-
-      features.push(`* ${capitalize(cleanedMessage)}`);
-    }
-
-    if (CONFIG.keywords.fixes.some(word => lowerMessage.includes(word))) {
-      let cleanedMessage = message
-        .replace(new RegExp(`^(${CONFIG.keywords.fixes.join("|")}):?`, "i"), "")
-        .trim();
-
-      Object.entries(CONFIG.namesLookup).forEach(([gitName, displayName]) => {
-        cleanedMessage = cleanedMessage.replace(new RegExp(gitName, "g"), displayName);
-      });
-
-      fixes.push(`* ${capitalize(cleanedMessage)}`);
-    }
+// Helper to replace names and capitalize the message
+function formatCommit(message) {
+  for (const [gitName, displayName] of Object.entries(CONFIG.namesLookup)) {
+    message = message.replace(gitName, displayName);
   }
+  return `* ${capitalize(message.trim())}`;
+}
 
-  return { features, fixes };
+// Generalized processor for any commit type
+function extractCommitsByType(commits, regex) {
+  return commits
+    .filter(commit => regex.test(commit))
+    .map(commit => formatCommit(commit.replace(regex, "")));
+}
+
+function processCommits(rawCommits) {
+  const { feat, fix } = CONFIG.conventionalCommitRegexes;
+  return {
+    features: extractCommitsByType(rawCommits, feat),
+    fixes: extractCommitsByType(rawCommits, fix),
+  };
 }
 
 // Generate main changelog content
