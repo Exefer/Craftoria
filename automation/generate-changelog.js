@@ -27,7 +27,6 @@ const CONFIG = {
   },
 };
 
-// Initialize configuration
 async function initializeConfig() {
   CONFIG.cutoffCommitHash ||= await getLatestBumpCommitHash(CONFIG.branchName);
   CONFIG.packVersion ||= packMetadata.version;
@@ -40,7 +39,6 @@ async function initializeConfig() {
   }
 }
 
-// Extract mod metadata from commit
 async function getCommitMetadataFiles(commitHash) {
   const folderName = `craftoria-${commitHash}-${Date.now()}`;
   const folderPath = path.join(os.tmpdir(), folderName);
@@ -69,7 +67,6 @@ async function getCommitMetadataFiles(commitHash) {
   return [packMetadata, modsMetadata];
 }
 
-// Compare mod collections and categorize changes
 function compareModCollections(oldMods, currentMods) {
   const newMods = {};
   const removedMods = {};
@@ -92,20 +89,17 @@ function compareModCollections(oldMods, currentMods) {
   return { newMods, removedMods, updatedMods };
 }
 
-// Helper to get first update info from metadata
 function getUpdateInfo(metadata) {
-  const updateKey = Object.keys(metadata.update)[0];
+  const [updateKey] = Object.keys(metadata.update);
   return metadata.update[updateKey];
 }
 
-// Format mod link for display
 function formatModLink(metadata, useFileName = false) {
   const updateInfo = getUpdateInfo(metadata);
   const displayName = useFileName ? metadata.filename : metadata.name;
   return `* [${displayName}](https://curseforge.com/projects/${updateInfo["project-id"]})`;
 }
 
-// Format update link showing old -> new
 function formatUpdateLink(id, oldMods, currentMods) {
   const newMod = currentMods[id];
   const oldMod = oldMods[id];
@@ -116,7 +110,6 @@ function formatUpdateLink(id, oldMods, currentMods) {
   return `* [${oldMod.filename}](https://curseforge.com/projects/${oldUpdate["project-id"]}/files/${oldUpdate["file-id"]}) -> [${newMod.filename}](https://curseforge.com/projects/${newUpdate["project-id"]}/files/${newUpdate["file-id"]})`;
 }
 
-// Process git commits into features and fixes
 function processCommits(rawCommits) {
   const features = [];
   const fixes = [];
@@ -125,7 +118,6 @@ function processCommits(rawCommits) {
     const lowerMessage = message.toLowerCase();
     if (CONFIG.keywords.filter.some(word => lowerMessage.includes(word))) continue;
 
-    // Process features
     if (CONFIG.keywords.features.some(word => lowerMessage.includes(word))) {
       let cleanedMessage = message
         .replace(new RegExp(`^(${CONFIG.keywords.features.join("|")}):?`, "i"), "")
@@ -138,7 +130,6 @@ function processCommits(rawCommits) {
       features.push(`* ${cleanedMessage}`);
     }
 
-    // Process fixes
     if (CONFIG.keywords.fixes.some(word => lowerMessage.includes(word))) {
       let cleanedMessage = message
         .replace(new RegExp(`^(${CONFIG.keywords.fixes.join("|")}):?`, "i"), "")
@@ -194,18 +185,19 @@ function generateModChangelog(addedMods, removedMods, changedMods, oldPackMetada
   return sections.join("\n\n");
 }
 
-// Main changelog generation function
+// Main function
 async function generateChangelog() {
   if (!Bun.which("git")) {
     throw new Error("Git is required but was not found on the system.");
   }
-  $.cwd(CONFIG.gitRepoPath);
 
   await initializeConfig();
 
   if (!(await fs.exists(CONFIG.gitRepoPath))) {
     throw new Error(`Repo path doesn't exist: ${CONFIG.gitRepoPath}`);
   }
+
+  $.cwd(CONFIG.gitRepoPath);
 
   const [oldPackMetadata, oldMods] = await getCommitMetadataFiles(
     CONFIG.cutoffCommitHash
@@ -216,7 +208,6 @@ async function generateChangelog() {
     currentMods
   );
 
-  // Format mod links
   const addedLinks = Object.values(newMods).map(formatModLink);
   const removedLinks = Object.values(removedMods).map(formatModLink);
   const changedLinks = Object.keys(updatedMods).map(id =>
@@ -228,7 +219,6 @@ async function generateChangelog() {
   )
     .split("\n")
     .filter(Boolean);
-
   const { features, fixes } = processCommits(rawCommits);
 
   const changelog = generateChangelogContent(features, fixes, addedLinks, removedLinks);
