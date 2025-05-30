@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "node:fs/promises";
 import os from "node:os";
-import { getLatestBumpCommitHash, writeTextToFile } from "./utils";
+import { capitalize, getLatestBumpCommitHash, writeTextToFile } from "./utils";
 import { $, Glob } from "bun";
 import packMetadata from "../pack.toml";
 
@@ -127,7 +127,7 @@ function processCommits(rawCommits) {
         cleanedMessage = cleanedMessage.replace(new RegExp(gitName, "g"), displayName);
       });
 
-      features.push(`* ${cleanedMessage}`);
+      features.push(`* ${capitalize(cleanedMessage)}`);
     }
 
     if (CONFIG.keywords.fixes.some(word => lowerMessage.includes(word))) {
@@ -139,7 +139,7 @@ function processCommits(rawCommits) {
         cleanedMessage = cleanedMessage.replace(new RegExp(gitName, "g"), displayName);
       });
 
-      fixes.push(`* Fixed ${cleanedMessage}`);
+      fixes.push(`* ${capitalize(cleanedMessage)}`);
     }
   }
 
