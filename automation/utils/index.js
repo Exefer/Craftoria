@@ -1,6 +1,8 @@
 import { $ } from "bun";
 import fs from "node:fs/promises";
 import path from "node:path";
+import os from "node:os";
+import { Glob } from "bun";
 
 /**
  * Writes text to a file.
@@ -44,4 +46,39 @@ export async function getLatestBumpCommitHash(branchName = "HEAD") {
 /** @param {string} str */
 export function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function getUpdateInfo(metadata) {
+  const [updateKey] = Object.keys(metadata.update);
+  return metadata.update[updateKey];
+}
+
+export async function getCommitMetadataFiles(commitHash, gitRepoPath) {
+  const folderName = `craftoria-${commitHash}-${Date.now()}`;
+  const folderPath = path.join(os.tmpdir(), folderName);
+  const packwizGlob = new Glob("*.pw.toml");
+
+  await $`git archive --format=tar --output=${folderPath}.tar ${commitHash} pack.toml mods/`.cwd(
+    gitRepoPath
+  );
+  await $`mkdir ${folderPath}`;
+  await $`tar -xf ${folderPath}.tar -C ${folderPath}`;
+
+  const scannedFiles = await Array.fromAsync(
+    packwizGlob.scan({ cwd: `${folderPath}/mods`, absolute: true })
+  );
+
+  const packMetadata = require(`${folderPath}/pack.toml`);
+  const modsMetadata = Object.fromEntries(
+    scannedFiles.map(filePath => {
+      const metadata = require(filePath);
+      const updateInfo = getUpdateInfo(metadata);
+      const fileId = updateInfo["file-id"];
+      return [fileId, metadata];
+    })
+  );
+
+  await $`rm -rf ${folderPath}.tar ${folderPath}`;
+
+  return [packMetadata, modsMetadata];
 }

@@ -1,8 +1,13 @@
 import path from "node:path";
 import fs from "node:fs/promises";
-import os from "node:os";
-import { capitalize, getLatestBumpCommitHash, writeTextToFile } from "./utils";
-import { $, Glob } from "bun";
+import {
+  capitalize,
+  getCommitMetadataFiles,
+  getLatestBumpCommitHash,
+  getUpdateInfo,
+  writeTextToFile,
+} from "./utils";
+import { $ } from "bun";
 import packMetadata from "../pack.toml";
 
 // Configuration
@@ -30,40 +35,15 @@ async function initializeConfig() {
   CONFIG.cutoffCommitHash ||= await getLatestBumpCommitHash(CONFIG.branchName);
   CONFIG.packVersion ||= packMetadata.version;
 
-  const [oldPackMetadata] = await getCommitMetadataFiles(CONFIG.cutoffCommitHash);
+  const [oldPackMetadata] = await getCommitMetadataFiles(
+    CONFIG.cutoffCommitHash,
+    CONFIG.gitRepoPath
+  );
   CONFIG.oldPackVersion ||= oldPackMetadata.version;
 
   if (CONFIG.oldPackVersion === CONFIG.packVersion) {
     throw new Error("You did not version bump the pack version!");
   }
-}
-
-async function getCommitMetadataFiles(commitHash) {
-  const folderName = `craftoria-${commitHash}-${Date.now()}`;
-  const folderPath = path.join(os.tmpdir(), folderName);
-  const packwizGlob = new Glob("*.pw.toml");
-
-  await $`git archive --format=tar --output=${folderPath}.tar ${commitHash} pack.toml mods/`;
-  await $`mkdir ${folderPath}`;
-  await $`tar -xf ${folderPath}.tar -C ${folderPath}`;
-
-  const scannedFiles = await Array.fromAsync(
-    packwizGlob.scan({ cwd: `${folderPath}/mods`, absolute: true })
-  );
-
-  const packMetadata = require(`${folderPath}/pack.toml`);
-  const modsMetadata = Object.fromEntries(
-    scannedFiles.map(filePath => {
-      const metadata = require(filePath);
-      const updateInfo = getUpdateInfo(metadata);
-      const fileId = updateInfo["file-id"];
-      return [fileId, metadata];
-    })
-  );
-
-  await $`rm -rf ${folderPath}.tar ${folderPath}`;
-
-  return [packMetadata, modsMetadata];
 }
 
 function compareModCollections(oldMods, currentMods) {
@@ -86,11 +66,6 @@ function compareModCollections(oldMods, currentMods) {
   }
 
   return { newMods, removedMods, updatedMods };
-}
-
-function getUpdateInfo(metadata) {
-  const [updateKey] = Object.keys(metadata.update);
-  return metadata.update[updateKey];
 }
 
 function formatModLink(metadata, useFileName = false) {
@@ -186,9 +161,13 @@ async function generateChangelog() {
   $.cwd(CONFIG.gitRepoPath);
 
   const [oldPackMetadata, oldMods] = await getCommitMetadataFiles(
-    CONFIG.cutoffCommitHash
+    CONFIG.cutoffCommitHash,
+    CONFIG.gitRepoPath
   );
-  const [, currentMods] = await getCommitMetadataFiles(CONFIG.branchName);
+  const [, currentMods] = await getCommitMetadataFiles(
+    CONFIG.branchName,
+    CONFIG.gitRepoPath
+  );
   const { newMods, removedMods, updatedMods } = compareModCollections(
     oldMods,
     currentMods
